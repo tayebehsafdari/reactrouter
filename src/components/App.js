@@ -1,15 +1,17 @@
 import './App.scss';
 
-import {Container, Form} from 'react-bootstrap';
-import Counter from "./Counter";
+import {Container} from 'react-bootstrap';
+import Home from "./Home";
+import About from "./About";
+import Users from "./Users";
 
 function App() {
     return (
         <div className="App">
             <Container>
-                <Form>
-                    <Counter initialCount={0}/>
-                </Form>
+                <Home/>
+                <About/>
+                <Users/>
             </Container>
         </div>
     );
