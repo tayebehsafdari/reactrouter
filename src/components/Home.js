@@ -1,7 +1,17 @@
 import React from "react";
 
-function Home() {
-    return <h2>Home</h2>;
+function Home(props) {
+
+    function handleClick() {
+        props.history.push({
+            pathname: "/somewhere",
+            search: "?some=search-string",
+            hash: "#howdy",
+            state: {userDefined: true}
+        });
+    }
+
+    return <h2 onClick={handleClick}>Home</h2>;
 }
 
 export default Home;
